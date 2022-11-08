@@ -1,0 +1,64 @@
+
+import java.util.Scanner;
+import static java.lang.Math.max;
+import static java.lang.Math.sqrt;
+import static java.lang.Math.pow;
+
+
+public class java.function
+{
+    static void MaxMethod(){
+        Scanner MaxInput = new Scanner(System.in);
+        System.out.println("Please enter value 1");
+        double max1 = MaxInput.nextDouble();
+        System.out.println("Please enter value 2");
+        double max2 = MaxInput.nextDouble();
+        double Max = max(max1 , max2);
+        System.out.println("The maximum number is: " + Max);
+        MaxInput.close();
+
+    }
+    static void PowMethod(){
+        Scanner PowInput = new Scanner(System.in);
+        System.out.println("Please enter value 1");
+        double Pow1 = PowInput.nextDouble();
+        System.out.println("Please enter the power");
+        double Pow2 = PowInput.nextDouble();
+        double Pow = pow(Pow1 , Pow2);
+        System.out.println("The result is: " + Pow);
+        PowInput.close();
+
+    }
+
+
+    public static void main(String[] args)
+    {
+        Scanner UInput = new Scanner(System.in);
+        double num1,num2;
+        System.out.println("Enter the square root number:");
+        num1 = UInput.nextDouble();
+        UInput.close();
+        num2 = sqrt(num1);
+        System.out.println("The square root is: "+num2);
+
+        MaxMethod();
+        PowMethod();
+    }
+
+}
+
+
+
+
+
+/*
+    public static void main(String[] args)
+    {
+        Scanner UInput = new Scanner(System.in);
+        double num1,num2;
+        num1 = UInput.nextDouble();
+        UInput.close();
+        num2 = sqrt(num1);
+        System.out.println(num2);
+    }
+ */
