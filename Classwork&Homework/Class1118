@@ -14,7 +14,7 @@ class Type{
 }
 
 
-public class Main {      //main classs
+public class Main {
 
     public static void main(String[] args){
         Car Car1= new Car();
