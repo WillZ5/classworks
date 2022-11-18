@@ -1,0 +1,25 @@
+class Car{
+    public String color="red";
+
+    public void DisplayColor(){
+        System.out.println("red color");
+    }
+}
+class Type{
+    public String type="sports";
+
+    public void DisplayType(){
+        System.out.println("sports car");
+    }
+}
+
+
+public class Main {      //main classs
+
+    public static void main(String[] args){
+        Car Car1= new Car();
+        Car1.DisplayColor();
+        Type Car2= new Type();
+        Car2.DisplayType();
+    }
+}
