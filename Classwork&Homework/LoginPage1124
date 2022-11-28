@@ -1,0 +1,77 @@
+import javax.swing.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+
+
+
+
+public class GUI implements ActionListener{
+
+    public static JTextField TFUser;
+    public static JPasswordField JPPw;
+
+    public static void main(String[] args) {
+        JFrame frame = new JFrame();
+        JPanel panel = new JPanel();
+            frame.setSize(350,200);
+            frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+            frame.setVisible(true);
+            frame.add(panel);
+            panel.setSize(350,200);
+            panel.setLayout(null);
+
+            JLabel LBUser = new JLabel("User:");
+                LBUser.setBounds(10,20,80,25);
+                panel.add(LBUser);
+
+            JLabel LBPw = new JLabel("Password:");
+                LBPw.setBounds(10,50,80,25);
+                panel.add(LBPw);
+
+            TFUser = new JTextField();
+                TFUser.setBounds(90,20,200,25);
+                panel.add(TFUser);
+
+            JPPw = new JPasswordField();
+                JPPw.setBounds(90,50,200,25);
+                panel.add(JPPw);
+
+            JButton BtLogin = new JButton("Login");
+                BtLogin.setBounds(210,100,80,25);
+                panel.add(BtLogin);
+                BtLogin.addActionListener(new GUI());
+
+            JLabel LBSuccess = new JLabel("");
+                LBSuccess.setBounds(10,110,300,25);
+                panel.add(LBSuccess);
+    }
+
+    @Override
+    public void actionPerformed(ActionEvent e){
+        String user = TFUser.getText();
+        String password = JPPw.getText();
+
+        System.out.println(user + password);
+
+        if (user.equals("Admin") && password.equals("password")){
+            GUI page = new GUI();
+            page.Display();
+        }
+    }
+
+    private void Display() {
+        String user = GUI.TFUser.getText();
+        String password = GUI.JPPw.getText();
+        JFrame Su = new JFrame();
+        JPanel Pa = new JPanel();
+            Su.setSize(350,200);
+            Su.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+            Su.add(Pa);
+            Pa.setSize(350,200);
+            Su.setVisible(true);
+
+        JLabel Welcome = new JLabel("Welcome "+ user);
+            TFUser.setBounds(10,20,80,25);
+            Pa.add(Welcome);
+    }
+}
