@@ -1,0 +1,35 @@
+import javax.swing.*;
+
+public class Main {
+    public static void main(String[] args) {
+        JFrame frame = new JFrame();
+        JPanel panel = new JPanel();
+        frame.setSize(800,600);
+        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        frame.setVisible(true);
+        frame.add(panel);
+        panel.setSize(800,600);
+        panel.setLayout(null);
+
+        JLabel Level = new JLabel("Level 1");
+            Level.setBounds(100,20,50,25);
+            panel.add(Level);
+
+        JLabel HP = new JLabel("HP: 100");
+            HP.setBounds(650,20,50,25);
+            panel.add(HP);
+
+        JButton attack = new JButton("Attack");
+            attack.setBounds(100,200,80,25);
+            panel.add(attack);
+
+        JButton defense = new JButton("Defense");
+            defense.setBounds(650,200,80,25);
+            panel.add(defense);
+
+        JTextField text = new JTextField();
+            text.setBounds(100,300,600,90);
+            panel.add(text);
+            
+    }
+}
